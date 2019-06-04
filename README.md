@@ -9,9 +9,10 @@
 |passwaord|string|null: false|
 
 ### Association
-- has_many :users_rooms
-- has_many :rooms, through: :users_rooms
+- has_many :members
+- has_many :rooms, through: :members
 - has_many :messages 
+- has_many :pictures
 
 
 ## roomsテーブル
@@ -21,9 +22,11 @@
 |name|string|null: false|
 
 ### Association
-- has_many :users_rooms
-- has_many :users, through: :users_rooms
+- has_many :members
+- has_many :users, through: :members
 - has_many :messages
+- has_many :pictures
+
 
 
 ## membersテーブル
@@ -38,7 +41,7 @@
 - belongs_to :user
 
 
-## messagesテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
