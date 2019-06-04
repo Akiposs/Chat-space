@@ -54,7 +54,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|image|text|null: false|
+|picture|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |room_id|integer|null: false, foreign_key: true|
 
