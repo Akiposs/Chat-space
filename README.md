@@ -4,12 +4,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
 |email|string|null: false, unique: true|
 |passwaord|string|null: false|
-|room_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users_rooms
@@ -21,9 +18,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|message_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :users_rooms
@@ -39,19 +34,30 @@
 |room_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
+- belongs_to :room
 - belongs_to :user
 
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|message|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |room_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :users
-- belongs_to :rooms
+- belongs_to :user
+- belongs_to :room
+
+## picturesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|image|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|room_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :room
