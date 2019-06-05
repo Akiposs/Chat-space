@@ -41,22 +41,11 @@
 - belongs_to :user
 
 
-## messageテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |message|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|room_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :room
-
-## picturesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
 |picture|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |room_id|integer|null: false, foreign_key: true|
