@@ -1,0 +1,41 @@
+.Header{
+  height:30px;
+  width:100%;
+  background-color: $creat-group;
+}
+
+.Chat-main{             /*あとでルーム数によって伸びていくよう設定する*/
+  height:660px;
+  width: calc(100vw - 300px);
+  position: relative;
+  float:right;
+  background-color: white;
+  .form{
+    height: 90px;
+    width:100%;  
+    padding: 20px 40px;
+    box-sizing: border-box; /*あとでcalcで書き換え*/   /*何故親がrelative, 子がabsoluteならぴったり右下にいくのか*/
+    position: absolute;
+    bottom:0;
+    background-color: gray;
+    .new-message{
+      height:50px;
+      width:100%;
+      padding:50px auto;
+      background-color: white;
+    }
+  }
+}
+
+.Chat-side{         /*あとでルーム数によって伸びていくよう設定する*/
+  height:660px;
+  width:300px;
+  float:left;
+  background-color: $chat-side;
+  .Chat-side-top{
+    height:120px;
+    width:100%;
+    float:left;
+    background-color: $chat-side-top;
+  }
+}
