@@ -12,6 +12,7 @@
 - has_many :members
 - has_many :rooms, through: :members
 - has_many :messages 
+- has_many :pictures
 
 
 ## roomsテーブル
@@ -24,6 +25,7 @@
 - has_many :members
 - has_many :users, through: :members
 - has_many :messages
+- has_many :pictures
 
 
 
@@ -44,7 +46,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |message|text|
-|picture|string|
+|picture|text|
 |user_id|integer|null: false, foreign_key: true|
 |room_id|integer|null: false, foreign_key: true|
 
