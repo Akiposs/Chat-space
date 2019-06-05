@@ -10,11 +10,11 @@
 
 ### Association
 - has_many :members
-- has_many :rooms, through: :members
+- has_many :groups, through: :members
 - has_many :messages 
 
 
-## roomsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -32,10 +32,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|room_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :room
+- belongs_to :group
 - belongs_to :user
 
 
@@ -46,8 +46,8 @@
 |message|text|
 |picture|string|
 |user_id|integer|null: false, foreign_key: true|
-|room_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
-- belongs_to :room
+- belongs_to :group
