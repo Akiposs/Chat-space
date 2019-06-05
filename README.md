@@ -45,8 +45,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
-|picture|text|null: false|
+|message|text|
+|picture|text|
 |user_id|integer|null: false, foreign_key: true|
 |room_id|integer|null: false, foreign_key: true|
 
