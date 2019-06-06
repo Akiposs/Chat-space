@@ -27,15 +27,35 @@
   }
 }
 
-.Chat-side{         /*あとでルーム数によって伸びていくよう設定する*/
-  height:660px;
-  width:300px;
+.Chat-side{
   float:left;
-  background-color: $chat-side;
-  .Chat-side-top{
+  .side-header{
     height:120px;
-    width:100%;
-    float:left;
+    width:300px;
+    box-sizing: border-box;
+    padding:0 20px;
+    display: flex;
+    align-items: center;
     background-color: $chat-side-top;
+    .side-header__box{
+      background-color: red;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height:24px;
+      font-weight: bold;
+      color:#FFFFFF;
+      font-size:16px;
+      .side-header__box__menu{
+        background-color: purple;
+      }
+    }
+  }
+   .groups{         /*あとでルーム数によって伸びていくよう設定する*/
+    height:540px;
+    width:300px;
+    box-sizing: border-box;
+    padding:0 20px;
+    background-color: $chat-side;
   }
 }
