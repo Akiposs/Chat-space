@@ -1,0 +1,188 @@
+.header{
+  height:24px;
+  width:100%;
+  text-align: center;
+  background-color: $creat-group;
+}
+
+.chat-main{             /*あとでルーム数によって伸びていくよう設定する*/
+  height:660px;
+  width: calc(100vw - 300px);
+  position: relative;
+  float:right;
+  background-color: #fafafa;
+  .main-header{
+    width:100%;
+    height:100px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: solid 1px #eeeeee;
+    background-color: white;
+    &__left-box{
+      margin-top: 35px;
+      &__curent-group{
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+      } 
+      &__member-list{
+        display: flex;
+        font-size: 12px;
+        color: #999999;
+        margin-top:15px;
+        li{
+          margin-left: 0.3rem;
+       }
+     }
+    }
+    &__edit-btn{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      .contents__btn{
+        color:#38aef0;
+        text-decoration: none;
+      }
+    }
+  }
+  .messages{
+    height: calc(100vh - 214px);
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    overflow: scroll;
+    .message{
+      padding-bottom: 40px;
+      &__upper-info{
+        display: flex;
+        margin-bottom: 10px;
+        &__talker{
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__text{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .form{
+    height: 90px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #ddd;
+    &__new-message{
+      display: flex;
+      height:100%;
+      padding:50px auto;
+      &__input-box{
+        position: relative;
+        width: 100%; 
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          box-sizing: border-box;
+          color: #434a54;
+          border-style: none;
+        }
+        &__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          i{
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+          }
+          &__file{
+            display: none;
+            }
+          }
+        }
+        .submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+      }
+    }
+  }
+}
+
+.chat-side{
+  float:left;
+  .side-header{
+    height:100px;
+    width:300px;
+    box-sizing: border-box;
+    padding:0 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: $chat-side-top;
+    &__box{
+      background-color:$chat-side-top;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height:24px;
+      font-weight: bold;
+      color:#FFFFFF;
+      font-size:16px;
+      &__menu{
+        background-color: $chat-side-top;
+        width:48px;
+        li{
+          float:left;
+          margin-left: 0.3rem;
+          .contents__btn{
+            color:white;
+          }
+        }
+      }
+    }
+  }
+  .groups{         /*あとでルーム数によって伸びていくよう設定する*/
+    height: calc(100vh - 124px);
+    width:300px;
+    box-sizing: border-box;
+    padding: 20px 20px 0;
+    overflow: scroll;
+
+    background-color: $chat-side;
+    .group{
+      height:51px;
+      font-weight:bold;
+      color:#FFFFFF;
+      margin-bottom:40px;
+      &__group-name{
+        margin-bottom:5px;
+        font-size:15px;
+      }
+      &__latest-message{
+          font-size:11px;
+      }
+    }
+  }
+}
