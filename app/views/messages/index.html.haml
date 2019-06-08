@@ -1,14 +1,65 @@
+!!!
+%html
+  %head
+    %meta(charset="UTF-8")
+  %body
 .Header
   .Header__logo
-    SNS
+    グループを作成しました
 .Chat-side 
   .side-header
     .side-header__box
       .side-header__box__username
         Akihiro
-      .side-header__box__menu
-        No.2
+      %ul.side-header__box__menu
+        %li< 
+          =link_to "", class: "Contents__btn" do
+            = fa_icon 'edit'
+        %li<
+          =link_to "", class: "Contents__btn" do
+            = fa_icon 'cog'
   .groups
+    .group
+      %p.group__group-name
+        Group1
+      %p.group__latest-message
+        こんにちは
+    .group
+      %p.group__group-name
+        Group2
+      %p.group__latest-message
+        こんにちは
+
 .Chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__curent-group
+        Group1
+      %ul.main-header__left-box__member-list
+        Member:
+        %li.main-header__left-box__member-list__member
+          Akihiro
+        %li.main-header__left-box__member-list__member
+          OPQ
+    .main-header__edit-btn
+      =link_to "", class: "Contents__btn" do
+        EDIT
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          Akihiro
+        %p.message__upper-info__date
+          2019/06/07(Fri)13:08:51
+      %p.message__text
+        やっほー
   .form
-    .new-message
+    .form__new-message
+      .form__new-message__input-box
+        %input{:class => "input-box__text", :size => "80", :placeholder => "type a message"}
+        %label.input-box__image{for: "message_image"} 
+          = fa_icon 'image'
+          %input.input-box__image__file{:type => "file", :name => "message[image]", :id => "message_image"}
+      %input.submit-btn{:type => "submit", :name => "commit"}
+          
+        
