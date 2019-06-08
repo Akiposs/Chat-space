@@ -37,7 +37,7 @@
         %li.main-header__left-box__member-list__member
           OPQ
     .main-header__edit-btn
-      =link_to "", class: "Contents__btn" do
+      =link_to "", class: "contents__btn" do
         EDIT
   .messages
     .message
@@ -51,10 +51,10 @@
   .form
     .form__new-message
       .form__new-message__input-box
-        %input{:class => "input-box__text", :size => "80", :placeholder => "type a message"}
-        %label.input-box__image{for: "message_image"} 
+        %input{:class => "form__new-message__input-box__text", :size => "80", :placeholder => "type a message"}
+        %label.form__new-message__input-box__image{for: "message_image"} 
           = fa_icon 'image'
-          %input.input-box__image__file{:type => "file", :name => "message[image]", :id => "message_image"}
-      %input.submit-btn{:type => "submit", :name => "commit"}
+          %input.form__new-message__input-box__image__file{:type => "file", :name => "message[image]", :id => "message_image"}
+      %input.form__new-message__input-box__submit-btn{:type => "submit", :name => "commit"}
           
         
