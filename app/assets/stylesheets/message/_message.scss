@@ -1,10 +1,3 @@
-.header{
-  height:24px;
-  width:100%;
-  text-align: center;
-  background-color: $creat-group;
-}
-
 .chat-main{             /*あとでルーム数によって伸びていくよう設定する*/
   height:660px;
   width: calc(100vw - 300px);
@@ -19,7 +12,6 @@
     justify-content: space-between;
     display: flex;
     border-bottom: solid 1px #eeeeee;
-    background-color: white;
     &__left-box{
       margin-top: 35px;
       &__curent-group{
@@ -109,7 +101,7 @@
           color: #434a54;
           border-style: none;
         }
-        &__image{
+        .form__mask{
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
@@ -130,59 +122,59 @@
   }
 }
 
-.chat-side{
-  float:left;
-  .side-header{
-    height:100px;
-    width:300px;
-    box-sizing: border-box;
-    padding:0 20px;
-    display: flex;
-    align-items: center;
-    color: white;
-    background-color: $chat-side-top;
-    &__box{
-      background-color:$chat-side-top;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height:24px;
-      font-weight: bold;
-      color:#FFFFFF;
-      font-size:16px;
-      &__menu{
-        background-color: $chat-side-top;
-        width:48px;
-        li{
-          float:left;
-          margin-left: 0.3rem;
-          .contents__btn{
-            color:white;
-          }
-        }
-      }
-    }
-  }
-  .groups{         /*あとでルーム数によって伸びていくよう設定する*/
-    height: calc(100vh - 124px);
-    width:300px;
-    box-sizing: border-box;
-    padding: 20px 20px 0;
-    overflow: scroll;
+// .chat-side{
+//   float:left;
+//   .side-header{
+//     height:100px;
+//     width:300px;
+//     box-sizing: border-box;
+//     padding:0 20px;
+//     display: flex;
+//     align-items: center;
+//     color: white;
+//     background-color: $chat-side-top;
+//     &__box{
+//       background-color:$chat-side-top;
+//       display: flex;
+//       justify-content: space-between;
+//       width: 100%;
+//       height:24px;
+//       font-weight: bold;
+//       color:#FFFFFF;
+//       font-size:16px;
+//       &__menu{
+//         background-color: $chat-side-top;
+//         width:48px;
+//         li{
+//           float:left;
+//           margin-left: 0.3rem;
+//           .contents__btn{
+//             color:white;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .groups{         /*あとでルーム数によって伸びていくよう設定する*/
+//     height: calc(100vh - 124px);
+//     width:300px;
+//     box-sizing: border-box;
+//     padding: 20px 20px 0;
+//     overflow: scroll;
 
-    background-color: $chat-side;
-    .group{
-      height:51px;
-      font-weight:bold;
-      color:#FFFFFF;
-      margin-bottom:40px;
-      &__group-name{
-        margin-bottom:5px;
-        font-size:15px;
-      }
-      &__latest-message{
-          font-size:11px;
-      }
-    }
-  }
-}
+//     background-color: $chat-side;
+//     .group{
+//       height:51px;
+//       font-weight:bold;
+//       color:#FFFFFF;
+//       margin-bottom:40px;
+//       &__group-name{
+//         margin-bottom:5px;
+//         font-size:15px;
+//       }
+//       &__latest-message{
+//           font-size:11px;
+//       }
+//     }
+//   }
+// }
