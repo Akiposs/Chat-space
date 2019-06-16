@@ -13,7 +13,7 @@
         %li.main-header__left-box__member-list__member
           OPQ
     .main-header__edit-btn
-      =link_to "", class: "contents__btn" do
+      =link_to "/groups/#{@group.id}/edit", class: "contents__btn" do
         EDIT
   .messages
     = render @messages
