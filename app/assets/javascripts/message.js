@@ -55,7 +55,6 @@ $(function(){
   });
 
   var reloadMessages = function() {
-    var last_group_id = $('.message:last').data('group-id');
     var last_message_id = $('.message:last').data('id');
     $.ajax({
       url: `api/messages/`,
@@ -65,7 +64,6 @@ $(function(){
     })
     .done(function(data) {
       data.forEach(function(message) {
-        console.log(message);
         var html = buildHTML(message);
         $('.messages').append(html);
         scroll()
