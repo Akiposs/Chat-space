@@ -27,8 +27,8 @@
       
       #chat-group-users
   
-        #chat-group-user-22.chat-group-user.clearfix
-          %input{:name => "chat_group[user_ids][]", type: "hidden", value: "#{current_user.id}"}/
+        #chat-group-user.chat-group-user.clearfix
+          %input{name: "#{group.group_users}", type: "hidden", value: "#{current_user}"}/
           %p.chat-group-user__name 
             =current_user.name
 
