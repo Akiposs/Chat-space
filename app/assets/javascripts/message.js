@@ -53,9 +53,13 @@ $(function(){
         alert('error');
     })
   });
-
   var reloadMessages = function() {
-    var last_message_id = $('.message:last').data('id');
+    if(window.location.href.match(/\/groups\/\d+\/messages/)){
+      if($('.messages')[0]){
+        var last_message_id = $('.message:last').data('id');
+    }else {
+        var last_message_id = 0
+    }
     $.ajax({
       url: `api/messages/`,
       type: 'GET',
@@ -72,7 +76,10 @@ $(function(){
     .fail(function() {
       alert('自動更新が失敗しました！');
     });
+    }else{
+      clearInterval(reloadMessages);
+    }
   };
-  setInterval(reloadMessages,5000);
+    setInterval(reloadMessages,5000);
   });
 });
