@@ -34,6 +34,9 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+    
+    $('.form__submit').removeAttr('data-disable-with');
+
     $.ajax({
       url: url,
       type: "POST",
